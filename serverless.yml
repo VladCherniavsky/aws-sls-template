@@ -34,17 +34,9 @@ provider:
     name: ${self:service}-${self:provider.stage}-deployment-bucket
     serverSideEncryption: AES256
 
-  iam:
-    role:
-      statements:
-        - Effect: Allow
-          Action:
-            - 's3:CreateBucket'
-          Resource: '*'
-
 custom:
   webpack:
-    packager: yarn
+    packager: npm
     includeModules: true
 
 
