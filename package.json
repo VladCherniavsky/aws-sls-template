@@ -1,0 +1,23 @@
+{
+  "name": "aws-sls-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladCherniavsky/aws-sls-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladCherniavsky/aws-sls-template/issues"
+  },
+  "homepage": "https://github.com/VladCherniavsky/aws-sls-template#readme",
+  "devDependencies": {
+    "serverless-deployment-bucket": "^1.6.0",
+    "serverless-webpack": "^5.7.1"
+  }
+}
