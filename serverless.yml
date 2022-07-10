@@ -27,6 +27,7 @@ plugins:
 provider:
   name: aws
   runtime: nodejs14.x
+  stage: dev
   lambdaHashingVersion: 20201221
 
   deploymentBucket:
