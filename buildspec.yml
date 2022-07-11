@@ -6,8 +6,7 @@ phases:
       - npm install -g serverless
   build:
     commands:
-      - serverless package --package target/dev
-      - serverless deploy --package /target/dev
+      - serverless deploy
 
 artifacts:
   files:
