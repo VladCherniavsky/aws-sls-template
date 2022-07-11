@@ -121,10 +121,10 @@ functions:
 
 # you can add CloudFormation resource templates here
 resources:
-  Resources:
-    Transform:
-      - AWS::Serverless-2016-10-31
-      - ALKSify
+  Transform:
+    - AWS::Serverless-2016-10-31
+    - ALKSify
+#  Resources:
 
 #    NewResource:
 #      Type: AWS::S3::Bucket
