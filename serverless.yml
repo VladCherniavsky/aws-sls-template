@@ -120,10 +120,10 @@ functions:
 #      variable2: value2
 
 # you can add CloudFormation resource templates here
-resources:
-  Transform:
-    - AWS::Serverless-2016-10-31
-    - ALKSify
+#resources:
+#  Transform:
+#    - AWS::Serverless-2016-10-31
+#    - ALKSify
 #  Resources:
 
 #    NewResource:
