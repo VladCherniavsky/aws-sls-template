@@ -5,7 +5,7 @@ export const hello = async (event) => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'Hey Vlad',
+        message: 'Hi Vladislav',
         input: event,
       },
       null,
