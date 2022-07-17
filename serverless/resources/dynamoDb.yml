@@ -12,6 +12,8 @@ Resources:
       KeySchema:
         - AttributeName: 'email'
           KeyType: 'HASH'
+        - AttributeName: 'name'
+          KeyType: 'HASH'
       StreamSpecification:
         StreamViewType: NEW_AND_OLD_IMAGES
 
