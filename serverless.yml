@@ -41,8 +41,8 @@ custom:
   database:
     UserTestTable: ${self:service}-store-${self:custom.stageName}-UserTestTable
 
-
-
+resources:
+  - ${file(./serverless/resources/dynamoDb.yml)}
 
 # you can overwrite defaults here
 #  stage: dev
