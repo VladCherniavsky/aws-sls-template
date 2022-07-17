@@ -13,7 +13,7 @@ Resources:
         - AttributeName: 'email'
           KeyType: 'HASH'
         - AttributeName: 'name'
-          KeyType: 'HASH'
+          KeyType: 'RANGE'
       StreamSpecification:
         StreamViewType: NEW_AND_OLD_IMAGES
 
