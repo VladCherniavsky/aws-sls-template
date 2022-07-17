@@ -8,7 +8,7 @@ Resources:
         - AttributeName: 'email'
           AttributeType: 'S'
         - AttributeName: 'name'
-          AttributeType: 's'
+          AttributeType: 'S'
       KeySchema:
         - AttributeName: 'email'
           KeyType: 'HASH'
