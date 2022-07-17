@@ -38,6 +38,8 @@ custom:
   webpack:
     packager: npm
     includeModules: true
+  database:
+    UserTestTable: ${self:service}-store-${self:custom.stageName}-UserTestTable
 
 
 
