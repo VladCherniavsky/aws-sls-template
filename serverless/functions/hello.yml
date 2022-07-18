@@ -1,0 +1,3 @@
+hello:
+  handler: src/functions/handler.hello
+  name: ${self:service}-hello-${self:provider.stage}
