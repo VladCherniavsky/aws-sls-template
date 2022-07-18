@@ -6,3 +6,5 @@ addUser:
         method: post
         path: api/user
         integration: lambda
+  environment:
+    TABLE_NAME: ${self:custom.database.UserTestTable}

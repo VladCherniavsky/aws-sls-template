@@ -7,6 +7,7 @@ export const addUser = async(event: any) => {
         body: {
             message: 'Hi Vladislav',
             input: event,
+            env: process.env
         },
     }
 }
