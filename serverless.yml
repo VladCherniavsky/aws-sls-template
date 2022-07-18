@@ -17,6 +17,17 @@ provider:
     name: ${self:service}-${self:provider.stage}-deployment-bucket
     serverSideEncryption: AES256
 
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "dynamodb:PutItem"
+          Resource:
+            - arn:aws:dynamodb:*:${aws:accountId}:table/${self:custom.database.UserTestTable}
+
+
+
 custom:
   webpack:
     packager: npm
@@ -26,6 +37,8 @@ custom:
 
 resources:
   - ${file(./serverless/resources/dynamoDb.yml)}
+
+
 
 # you can overwrite defaults here
 #  stage: dev
