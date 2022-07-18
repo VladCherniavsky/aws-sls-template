@@ -5,3 +5,4 @@ addUser:
     - http:
         method: post
         path: api/user
+        integration: lambda
