@@ -1,7 +1,6 @@
 addUser:
   name: ${self:service}-addUser-${self:provider.stage}
   handler: src/functions/user.addUser
-  url: true
   events:
     - http:
         method: post
