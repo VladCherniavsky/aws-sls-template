@@ -4,6 +4,7 @@ frameworkVersion: '2 || ^3.0.0'
 
 plugins:
   - serverless-deployment-bucket
+  - serverless-webpack
 
 
 provider:
