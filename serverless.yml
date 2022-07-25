@@ -14,7 +14,7 @@ provider:
   lambdaHashingVersion: 20201221
 
   deploymentBucket:
-    name: ${self:service}-${self:provider.stage}-deployment-bucket
+    name: ${self:service}-${aws:accountId}-${self:provider.stage}-deployment-bucket
     serverSideEncryption: AES256
 
   iam:
