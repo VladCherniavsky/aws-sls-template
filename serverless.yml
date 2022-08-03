@@ -22,10 +22,14 @@ provider:
       statements:
         - Effect: "Allow"
           Action:
-            - "dynamodb:PutItem"
+            - dynamodb:PutItem
           Resource:
             - arn:aws:dynamodb:*:${aws:accountId}:table/${self:custom.database.UserTestTable}
-
+        - Effect: "Allow"
+          Action:
+            - sns:Publish
+          Resource:
+            - !Ref UserTopicFifo
 
 
 custom:
@@ -34,9 +38,12 @@ custom:
     includeModules: true
   database:
     UserTestTable: ${self:service}-store-${self:provider.stage}-UserTestTable
+  topics:
+    UserTopic: ${self:service}-order-${self:provider.stage}-topic
 
 resources:
   - ${file(./serverless/resources/dynamoDb.yml)}
+  - ${file(./serverless/resources/sns.yml)}
 
 
 

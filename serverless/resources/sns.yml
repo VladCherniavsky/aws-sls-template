@@ -1,0 +1,5 @@
+Resources:
+  UserTopicFifo:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: ${self:custom.topics.UserTopic}

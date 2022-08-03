@@ -8,3 +8,24 @@ addUser:
         integration: lambda
   environment:
     TABLE_NAME: ${self:custom.database.UserTestTable}
+
+handleDbUserTableUpdate:
+  name: ${self:service}-handleDbUserTableUpdate-${self:provider.stage}
+  handler: src/functions/user.handleUserTableUpdate
+  events:
+    - stream:
+        type: dynamodb
+        arn: !GetAtt UserTetstTable.StreamArn
+        batchSize: 1
+        startingPosition: LATEST
+        enabled: true
+  environment:
+    USER_TOPIC_ARN: !Ref UserTopicFifo
+
+handleSnsUserTopicEvent:
+  name: ${self:service}-handleSnsUserTopicEvent-${self:provider.stage}
+  handler: src/functions/user.handleSnsUserTopicEvent
+  events:
+    - sns:
+        arn: !Ref UserTopicFifo
+        topicName: ${self:custom.topics.UserTopic}
